@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "language": "en",
+    "domain": "mixed_general_knowledge",
+    "n_passages": 50,
+    "n_queries": 40,
+    "grade_scale": {
+      "2": "highly relevant",
+      "1": "partially relevant"
+    }
+  },
+  "passages": [
+    {
+      "id": "p01",
+      "topic": "science",
+      "text": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize food from carbon dioxide and water. It takes place in the chloroplasts and releases oxygen as a by-product."
+    },
+    {
+      "id": "p02",
+      "topic": "science",
+      "text": "The water cycle describes how water evaporates from oceans and lakes, condenses into clouds, and falls back to the surface as rain or snow. This continuous movement redistributes fresh water across the planet."
+    },
+    {
+      "id": "p03",
+      "topic": "science",
+      "text": "The human heart is a muscular organ that pumps blood through the circulatory system. Each beat pushes oxygen-rich blood to the body's tissues and returns oxygen-poor blood to the lungs."
+    },
+    {
+      "id": "p04",
+      "topic": "science",
+      "text": "DNA, or deoxyribonucleic acid, carries the genetic instructions used in the growth and functioning of living organisms. Its double-helix structure stores hereditary information passed from parents to offspring."
+    },
+    {
+      "id": "p05",
+      "topic": "science",
+      "text": "Gravity is the force of attraction between masses. Isaac Newton described how this force keeps planets in orbit around the Sun and makes objects fall toward the Earth."
+    },
+    {
+      "id": "p06",
+      "topic": "science",
+      "text": "According to Albert Einstein's theory of relativity, the speed of light in a vacuum is constant at about 300,000 kilometres per second and nothing can travel faster than it."
+    },
+    {
+      "id": "p07",
+      "topic": "science",
+      "text": "Vaccines train the immune system to recognise and fight specific pathogens. By exposing the body to a harmless piece of a virus, they prepare defenders that respond quickly to a real infection."
+    },
+    {
+      "id": "p08",
+      "topic": "science",
+      "text": "Global warming is largely driven by greenhouse gases such as carbon dioxide and methane, which trap heat in the atmosphere. Rising average temperatures are causing shifts in weather patterns and sea levels."
+    },
+    {
+      "id": "p09",
+      "topic": "space",
+      "text": "On 20 July 1969, the Apollo 11 mission landed the first humans on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above."
+    },
+    {
+      "id": "p10",
+      "topic": "space",
+      "text": "Mars is the fourth planet from the Sun and is often called the Red Planet because of its iron-oxide dust. Robotic rovers have explored its surface searching for signs of past water."
+    },
+    {
+      "id": "p11",
+      "topic": "space",
+      "text": "A black hole is a region of spacetime where gravity is so strong that nothing, not even light, can escape. They form when massive stars collapse at the end of their lives."
+    },
+    {
+      "id": "p12",
+      "topic": "space",
+      "text": "NASA, the National Aeronautics and Space Administration, is the United States government agency responsible for the civilian space programme and aeronautics research."
+    },
+    {
+      "id": "p13",
+      "topic": "history",
+      "text": "World War II ended in 1945 after six years of global conflict. Victory in Europe was declared in May and the war in the Pacific concluded in September following Japan's surrender."
+    },
+    {
+      "id": "p14",
+      "topic": "history",
+      "text": "The Roman Empire was one of the largest empires in ancient history, ruling much of Europe, North Africa, and the Middle East. It was known for its roads, aqueducts, and system of law."
+    },
+    {
+      "id": "p15",
+      "topic": "history",
+      "text": "The Great Wall of China was built over many centuries to defend Chinese states against invasions and raids from northern nomadic groups. It stretches thousands of kilometres across northern China."
+    },
+    {
+      "id": "p16",
+      "topic": "history",
+      "text": "The French Revolution began in 1789 and overthrew the monarchy in France. It introduced ideas of liberty, equality, and fraternity that reshaped European politics."
+    },
+    {
+      "id": "p17",
+      "topic": "history",
+      "text": "The Industrial Revolution was a period of rapid technological and economic change beginning in the late 18th century. Steam power and mechanised factories transformed how goods were produced."
+    },
+    {
+      "id": "p18",
+      "topic": "geography",
+      "text": "The Amazon rainforest in South America is the largest tropical rainforest on Earth. It is home to an enormous diversity of plants and animals and produces a significant share of the world's oxygen."
+    },
+    {
+      "id": "p19",
+      "topic": "geography",
+      "text": "Mount Everest, on the border of Nepal and Tibet, is the highest mountain on Earth, rising about 8,849 metres above sea level. Climbers face thin air and extreme cold near its summit."
+    },
+    {
+      "id": "p20",
+      "topic": "geography",
+      "text": "The Sahara is the largest hot desert in the world, covering much of North Africa. Its landscape ranges from vast sand dunes to rocky plateaus, with very little rainfall."
+    },
+    {
+      "id": "p21",
+      "topic": "geography",
+      "text": "The Nile is a major river in northeastern Africa that flows northward into the Mediterranean Sea. For thousands of years it has supported agriculture and civilisation along its banks."
+    },
+    {
+      "id": "p22",
+      "topic": "geography",
+      "text": "The Pacific Ocean is the largest and deepest of Earth's oceans, stretching from Asia and Australia to the Americas. It contains the Mariana Trench, the deepest known point in the sea."
+    },
+    {
+      "id": "p23",
+      "topic": "tech",
+      "text": "Python is a popular high-level programming language known for its readable syntax. It was named after the British comedy group Monty Python and is widely used for data science and web development."
+    },
+    {
+      "id": "p24",
+      "topic": "nature",
+      "text": "The reticulated python is one of the world's longest snakes, a non-venomous reptile that kills prey by constriction. These snakes are found in the rainforests of Southeast Asia."
+    },
+    {
+      "id": "p25",
+      "topic": "tech",
+      "text": "Java is a widely used object-oriented programming language designed to run on many platforms through the Java Virtual Machine. It powers everything from Android apps to large enterprise systems."
+    },
+    {
+      "id": "p26",
+      "topic": "geography",
+      "text": "Java is a densely populated island of Indonesia and home to the capital city Jakarta. Its volcanic soil supports intensive rice farming across terraced fields."
+    },
+    {
+      "id": "p27",
+      "topic": "geography",
+      "text": "The bank of a river is the sloping land alongside the water channel. River banks can erode over time and are often lined with vegetation that stabilises the soil."
+    },
+    {
+      "id": "p28",
+      "topic": "finance",
+      "text": "A bank is a financial institution that accepts deposits from customers and lends money. People visit a bank to open accounts, withdraw cash, and apply for loans or mortgages."
+    },
+    {
+      "id": "p29",
+      "topic": "tech",
+      "text": "Cloud computing delivers computing services such as storage and processing over the internet. Instead of owning hardware, organisations rent resources from providers and scale them on demand."
+    },
+    {
+      "id": "p30",
+      "topic": "science",
+      "text": "A cloud is a visible mass of water droplets or ice crystals suspended in the atmosphere. Clouds form when moist air rises and cools, and they often signal approaching rain."
+    },
+    {
+      "id": "p31",
+      "topic": "tech",
+      "text": "Machine learning is a branch of artificial intelligence in which computer systems learn patterns from data rather than following explicit rules. Trained models can then make predictions on new inputs."
+    },
+    {
+      "id": "p32",
+      "topic": "tech",
+      "text": "The World Wide Web is a system of interlinked documents and resources accessed over the internet using web browsers. It was invented by Tim Berners-Lee around 1989."
+    },
+    {
+      "id": "p33",
+      "topic": "food",
+      "text": "Coffee is a popular brewed drink prepared from roasted coffee beans. It contains caffeine, a natural stimulant that many people rely on to feel alert in the morning."
+    },
+    {
+      "id": "p34",
+      "topic": "food",
+      "text": "Tea is an aromatic beverage made by pouring hot water over cured leaves of the tea plant. Depending on the type, it contains varying amounts of caffeine and antioxidants."
+    },
+    {
+      "id": "p35",
+      "topic": "games",
+      "text": "Chess is a two-player strategy board game played on an eight-by-eight grid. Each player commands sixteen pieces and aims to checkmate the opponent's king."
+    },
+    {
+      "id": "p36",
+      "topic": "sports",
+      "text": "The modern Olympic Games are an international sporting event held every four years, revived in 1896. Athletes from around the world compete across a wide range of summer and winter disciplines."
+    },
+    {
+      "id": "p37",
+      "topic": "tech",
+      "text": "Electric cars are powered by rechargeable batteries instead of petrol or diesel engines. They produce no tailpipe emissions and are seen as a key part of reducing transport pollution."
+    },
+    {
+      "id": "p38",
+      "topic": "science",
+      "text": "Solar panels convert sunlight directly into electricity using photovoltaic cells. As a renewable energy source, they help households and businesses cut their reliance on fossil fuels."
+    },
+    {
+      "id": "p39",
+      "topic": "environment",
+      "text": "Recycling is the process of collecting and reprocessing used materials such as paper, glass, and plastic into new products. It reduces waste sent to landfill and conserves raw resources."
+    },
+    {
+      "id": "p40",
+      "topic": "nature",
+      "text": "Honeybees are insects that pollinate flowering plants as they collect nectar and pollen. This pollination is essential for many crops and for the reproduction of countless wild plants."
+    },
+    {
+      "id": "p41",
+      "topic": "nature",
+      "text": "Sharks are a group of cartilaginous fish with a powerful sense of smell and rows of replaceable teeth. Despite their fearsome reputation, most species pose little threat to humans."
+    },
+    {
+      "id": "p42",
+      "topic": "nature",
+      "text": "The Great Barrier Reef off the coast of Australia is the world's largest coral reef system. It hosts thousands of species of fish, coral, and other marine life but is threatened by warming seas."
+    },
+    {
+      "id": "p43",
+      "topic": "art",
+      "text": "The Mona Lisa is a famous portrait painted by the Italian Renaissance artist Leonardo da Vinci. It is celebrated for the subject's enigmatic smile and now hangs in the Louvre in Paris."
+    },
+    {
+      "id": "p44",
+      "topic": "art",
+      "text": "William Shakespeare was an English playwright and poet regarded as one of the greatest writers in the language. His works include Hamlet, Macbeth, and Romeo and Juliet."
+    },
+    {
+      "id": "p45",
+      "topic": "math",
+      "text": "Pi is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159. It is an irrational number whose digits continue forever without repeating."
+    },
+    {
+      "id": "p46",
+      "topic": "math",
+      "text": "The Pythagorean theorem states that in a right-angled triangle the square of the hypotenuse equals the sum of the squares of the other two sides, written as a squared plus b squared equals c squared."
+    },
+    {
+      "id": "p47",
+      "topic": "geography",
+      "text": "Mount Kilimanjaro in Tanzania is the highest mountain in Africa, rising about 5,895 metres. It is a dormant volcano famous for the snow near its summit despite its equatorial location."
+    },
+    {
+      "id": "p48",
+      "topic": "geography",
+      "text": "Debate continues over the world's longest river: the Nile in Africa is traditionally listed at about 6,650 kilometres, while some surveys argue the Amazon in South America may be slightly longer."
+    },
+    {
+      "id": "p49",
+      "topic": "science",
+      "text": "Caffeine is a natural stimulant that acts on the central nervous system, reducing tiredness and increasing alertness. Consuming too much can cause restlessness, a faster heartbeat, and difficulty sleeping."
+    },
+    {
+      "id": "p50",
+      "topic": "history",
+      "text": "In 1903 the Wright brothers achieved the first controlled, powered, sustained flight of a heavier-than-air aircraft near Kitty Hawk, North Carolina, launching the age of aviation."
+    }
+  ],
+  "queries": [
+    {
+      "id": "q01",
+      "category": "exact_paraphrase",
+      "text": "How do plants make their own food using sunlight?",
+      "qrels": {
+        "p01": 2
+      }
+    },
+    {
+      "id": "q02",
+      "category": "exact_paraphrase",
+      "text": "When did humans first walk on the Moon?",
+      "qrels": {
+        "p09": 2
+      }
+    },
+    {
+      "id": "q03",
+      "category": "exact_paraphrase",
+      "text": "What is the tallest mountain on Earth?",
+      "qrels": {
+        "p19": 2
+      }
+    },
+    {
+      "id": "q40",
+      "category": "exact_paraphrase",
+      "text": "Why was the Great Wall of China built?",
+      "qrels": {
+        "p15": 2
+      }
+    },
+    {
+      "id": "q04",
+      "category": "semantic",
+      "text": "What organ pushes blood around the body?",
+      "qrels": {
+        "p03": 2
+      }
+    },
+    {
+      "id": "q05",
+      "category": "semantic",
+      "text": "Why is the planet heating up?",
+      "qrels": {
+        "p08": 2
+      }
+    },
+    {
+      "id": "q06",
+      "category": "semantic",
+      "text": "Which coding language was named after a comedy troupe?",
+      "qrels": {
+        "p23": 2
+      }
+    },
+    {
+      "id": "q07",
+      "category": "semantic",
+      "text": "How can we generate electricity from the sun?",
+      "qrels": {
+        "p38": 2
+      }
+    },
+    {
+      "id": "q39",
+      "category": "semantic",
+      "text": "Which insects help flowers reproduce?",
+      "qrels": {
+        "p40": 2
+      }
+    },
+    {
+      "id": "q08",
+      "category": "partial_related",
+      "text": "What does caffeine do to the body?",
+      "qrels": {
+        "p49": 2,
+        "p33": 1,
+        "p34": 1
+      }
+    },
+    {
+      "id": "q09",
+      "category": "partial_related",
+      "text": "Famous paintings by Italian artists",
+      "qrels": {
+        "p43": 2
+      }
+    },
+    {
+      "id": "q10",
+      "category": "partial_related",
+      "text": "Tall mountains in Africa",
+      "qrels": {
+        "p47": 2
+      }
+    },
+    {
+      "id": "q11",
+      "category": "partial_related",
+      "text": "What is the longest river in the world?",
+      "qrels": {
+        "p48": 2,
+        "p21": 1,
+        "p18": 1
+      }
+    },
+    {
+      "id": "q12",
+      "category": "no_match",
+      "text": "Best recipe for chocolate chip cookies",
+      "qrels": {}
+    },
+    {
+      "id": "q13",
+      "category": "no_match",
+      "text": "How do I change a flat car tire?",
+      "qrels": {}
+    },
+    {
+      "id": "q14",
+      "category": "no_match",
+      "text": "What is the current stock price of Apple?",
+      "qrels": {}
+    },
+    {
+      "id": "q15",
+      "category": "no_match",
+      "text": "Explain the rules of cricket batting",
+      "qrels": {}
+    },
+    {
+      "id": "q16",
+      "category": "no_match",
+      "text": "How do I house-train a puppy?",
+      "qrels": {}
+    },
+    {
+      "id": "q17",
+      "category": "edge_negation",
+      "text": "A programming language that is not Python",
+      "qrels": {
+        "p25": 2
+      }
+    },
+    {
+      "id": "q18",
+      "category": "edge_negation",
+      "text": "Common animals that are not mammals",
+      "qrels": {
+        "p41": 2,
+        "p40": 2,
+        "p24": 2
+      }
+    },
+    {
+      "id": "q19",
+      "category": "edge_negation",
+      "text": "Hot drinks that contain no caffeine",
+      "qrels": {}
+    },
+    {
+      "id": "q20",
+      "category": "edge_lexical_trap",
+      "text": "Using the Python programming language for data science",
+      "qrels": {
+        "p23": 2
+      }
+    },
+    {
+      "id": "q21",
+      "category": "edge_lexical_trap",
+      "text": "The grassy bank at the edge of a river",
+      "qrels": {
+        "p27": 2
+      }
+    },
+    {
+      "id": "q22",
+      "category": "edge_lexical_trap",
+      "text": "Where can I deposit money and open an account?",
+      "qrels": {
+        "p28": 2
+      }
+    },
+    {
+      "id": "q23",
+      "category": "edge_lexical_trap",
+      "text": "The island of Java in Indonesia",
+      "qrels": {
+        "p26": 2
+      }
+    },
+    {
+      "id": "q24",
+      "category": "edge_lexical_trap",
+      "text": "Dark clouds gathering in the sky before rain",
+      "qrels": {
+        "p30": 2
+      }
+    },
+    {
+      "id": "q25",
+      "category": "edge_numeric",
+      "text": "What major event happened in 1969?",
+      "qrels": {
+        "p09": 2
+      }
+    },
+    {
+      "id": "q26",
+      "category": "edge_numeric",
+      "text": "What is the value of pi to five decimal places?",
+      "qrels": {
+        "p45": 2
+      }
+    },
+    {
+      "id": "q27",
+      "category": "edge_numeric",
+      "text": "Which world war ended in 1945?",
+      "qrels": {
+        "p13": 2
+      }
+    },
+    {
+      "id": "q28",
+      "category": "edge_numeric",
+      "text": "In what year was the first powered airplane flight?",
+      "qrels": {
+        "p50": 2
+      }
+    },
+    {
+      "id": "q29",
+      "category": "edge_typo",
+      "text": "how does fotosynthesis wrok in plants",
+      "qrels": {
+        "p01": 2
+      }
+    },
+    {
+      "id": "q30",
+      "category": "edge_typo",
+      "text": "the tallest montain in the wrld",
+      "qrels": {
+        "p19": 2
+      }
+    },
+    {
+      "id": "q31",
+      "category": "edge_typo",
+      "text": "explain the pythagorean theorm",
+      "qrels": {
+        "p46": 2
+      }
+    },
+    {
+      "id": "q32",
+      "category": "edge_acronym",
+      "text": "What is NASA?",
+      "qrels": {
+        "p12": 2
+      }
+    },
+    {
+      "id": "q33",
+      "category": "edge_acronym",
+      "text": "The American government space agency",
+      "qrels": {
+        "p12": 2
+      }
+    },
+    {
+      "id": "q34",
+      "category": "edge_acronym",
+      "text": "What does DNA do in living things?",
+      "qrels": {
+        "p04": 2
+      }
+    },
+    {
+      "id": "q35",
+      "category": "edge_ambiguous",
+      "text": "Tell me about oceans and coral reefs",
+      "qrels": {
+        "p42": 2,
+        "p22": 1,
+        "p41": 1
+      }
+    },
+    {
+      "id": "q36",
+      "category": "edge_ambiguous",
+      "text": "Popular hot caffeinated beverages",
+      "qrels": {
+        "p33": 2,
+        "p34": 2,
+        "p49": 1
+      }
+    },
+    {
+      "id": "q37",
+      "category": "edge_ambiguous",
+      "text": "Facts about famous mountains",
+      "qrels": {
+        "p19": 2,
+        "p47": 2
+      }
+    },
+    {
+      "id": "q38",
+      "category": "edge_ambiguous",
+      "text": "Widely used programming languages",
+      "qrels": {
+        "p23": 2,
+        "p25": 2
+      }
+    }
+  ]
+}
