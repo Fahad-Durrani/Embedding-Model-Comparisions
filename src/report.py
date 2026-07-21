@@ -22,7 +22,13 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 import config  # noqa: E402
 
-PALETTE = {"minilm": "#2563eb", "e5": "#d97706"}  # blue / amber
+PALETTE = {"minilm": "#2563eb", "e5": "#d97706", "f2llm": "#059669"}  # blue / amber / green
+# fallback colors for any model keys not in PALETTE
+_FALLBACK_COLORS = ["#7c3aed", "#dc2626", "#0891b2", "#ca8a04"]
+
+
+def color_for(key: str, idx: int) -> str:
+    return PALETTE.get(key, _FALLBACK_COLORS[idx % len(_FALLBACK_COLORS)])
 CATEGORY_ORDER = [
     "exact_paraphrase", "semantic", "partial_related", "edge_ambiguous",
     "edge_acronym", "edge_numeric", "edge_typo", "edge_lexical_trap",
@@ -53,9 +59,9 @@ def chart_metrics_by_k(models) -> str:
     ks = config.K_VALUES
     fig, axes = plt.subplots(1, 2, figsize=(11, 4))
     for metric, ax in zip(("recall", "ndcg"), axes):
-        for key, m in models.items():
+        for i, (key, m) in enumerate(models.items()):
             ys = [m["aggregate"][f"{metric}@{k}"] for k in ks]
-            ax.plot(ks, ys, marker="o", label=m["name"], color=PALETTE[key])
+            ax.plot(ks, ys, marker="o", label=m["name"], color=color_for(key, i))
         ax.set_title(f"{metric.upper()}@k")
         ax.set_xlabel("k")
         ax.set_ylabel(metric.upper())
@@ -71,10 +77,12 @@ def chart_category(models) -> str:
     fig, ax = plt.subplots(figsize=(11, 4.2))
     import numpy as np
     x = np.arange(len(cats))
-    width = 0.38
+    n = len(models)
+    width = 0.8 / n
     for i, (key, m) in enumerate(models.items()):
         ys = [m["by_category"].get(c, {}).get("ndcg@10", float("nan")) for c in cats]
-        ax.bar(x + (i - 0.5) * width, ys, width, label=m["name"], color=PALETTE[key])
+        offset = (i - (n - 1) / 2) * width
+        ax.bar(x + offset, ys, width, label=m["name"], color=color_for(key, i))
     ax.set_xticks(x)
     ax.set_xticklabels(cats, rotation=35, ha="right", fontsize=8)
     ax.set_ylabel("nDCG@10")
@@ -87,13 +95,13 @@ def chart_category(models) -> str:
 
 
 def chart_score_dist(models) -> str:
-    fig, axes = plt.subplots(1, len(models), figsize=(11, 4), sharey=True)
+    fig, axes = plt.subplots(1, len(models), figsize=(4.2 * len(models), 4), sharey=True)
     if len(models) == 1:
         axes = [axes]
-    for ax, (key, m) in zip(axes, models.items()):
+    for i, (ax, (key, m)) in enumerate(zip(axes, models.items())):
         sd = m["score_dist"]
         ax.hist(sd["irrelevant"], bins=30, alpha=0.6, label="irrelevant", color="#9ca3af", density=True)
-        ax.hist(sd["relevant"], bins=30, alpha=0.7, label="relevant", color=PALETTE[key], density=True)
+        ax.hist(sd["relevant"], bins=30, alpha=0.7, label="relevant", color=color_for(key, i), density=True)
         tau = m["calibration"]["operating_points"]["f1_optimal"]["tau"]
         ax.axvline(tau, color="#111827", linestyle="--", linewidth=1.4, label=f"F1-opt τ={tau}")
         ax.set_title(m["name"], fontsize=10)
@@ -108,10 +116,10 @@ def chart_score_dist(models) -> str:
 
 def chart_pr(models) -> str:
     fig, ax = plt.subplots(figsize=(5.5, 4.5))
-    for key, m in models.items():
+    for i, (key, m) in enumerate(models.items()):
         pr = m["calibration"]["pr_curve"]
         ap = m["calibration"]["average_precision"]
-        ax.plot(pr["recall"], pr["precision"], color=PALETTE[key],
+        ax.plot(pr["recall"], pr["precision"], color=color_for(key, i),
                 label=f"{m['name']} (AP={ap:.3f})")
     ax.set_xlabel("recall")
     ax.set_ylabel("precision")
@@ -126,13 +134,13 @@ def chart_pr(models) -> str:
 
 def chart_f1_tau(models) -> str:
     fig, ax = plt.subplots(figsize=(5.5, 4.5))
-    for key, m in models.items():
+    for i, (key, m) in enumerate(models.items()):
         sweep = m["calibration"]["sweep"]
         taus = [r["tau"] for r in sweep]
         f1 = [r["f1"] for r in sweep]
-        ax.plot(taus, f1, color=PALETTE[key], label=m["name"])
+        ax.plot(taus, f1, color=color_for(key, i), label=m["name"])
         op = m["calibration"]["operating_points"]["f1_optimal"]
-        ax.scatter([op["tau"]], [op["f1"]], color=PALETTE[key], edgecolor="#111827", zorder=5, s=60)
+        ax.scatter([op["tau"]], [op["f1"]], color=color_for(key, i), edgecolor="#111827", zorder=5, s=60)
     ax.set_xlabel("cosine threshold τ")
     ax.set_ylabel("F1")
     ax.set_title("F1 vs. threshold (dot = F1-optimal τ per model)")
@@ -163,47 +171,57 @@ def fmt(v, nd=3) -> str:
 
 def recommendation(models) -> tuple[str, list[str]]:
     keys = list(models.keys())
-    a, b = models[keys[0]], models[keys[1]]
-    scorecard = []
-    wins = {keys[0]: 0, keys[1]: 0}
+    wins = {k: 0 for k in keys}
+    scorecard = []  # (label, {key: value}, winner_key_or_None)
 
-    def compare(label, key_metric, getter, higher_better=True):
-        va, vb = getter(a), getter(b)
-        if va != va or vb != vb:  # nan
-            return
-        win = keys[0] if (va > vb) == higher_better else keys[1]
-        if abs(va - vb) < 1e-9:
-            win = "tie"
-        else:
-            wins[win] += 1
-        scorecard.append((label, va, vb, win))
+    metric_specs = [
+        ("nDCG@10", lambda m: m["aggregate"]["ndcg@10"], True),
+        ("Recall@5", lambda m: m["aggregate"]["recall@5"], True),
+        ("MRR", lambda m: m["aggregate"]["mrr"], True),
+        ("Score separability", lambda m: m["aggregate"]["separability"], True),
+        ("Average Precision", lambda m: m["calibration"]["average_precision"], True),
+        ("Dynamic-k F1", lambda m: m["calibration"]["dynamic_k"]["f1"], True),
+        ("False-answer rate", lambda m: m["calibration"]["dynamic_k"]["false_answer_rate"], False),
+        ("Query latency (ms)", lambda m: m["timing"]["query_per_item_ms"], False),
+    ]
+    for label, getter, higher in metric_specs:
+        vals = {k: getter(models[k]) for k in keys}
+        valid = {k: v for k, v in vals.items() if v == v}  # drop NaN
+        if not valid:
+            continue
+        best_val = (max if higher else min)(valid.values())
+        tied = [k for k, v in valid.items() if abs(v - best_val) < 1e-9]
+        winner = tied[0] if len(tied) == 1 else None
+        if winner:
+            wins[winner] += 1
+        scorecard.append((label, vals, winner))
 
-    compare("nDCG@10", "ndcg", lambda m: m["aggregate"]["ndcg@10"])
-    compare("Recall@5", "recall", lambda m: m["aggregate"]["recall@5"])
-    compare("MRR", "mrr", lambda m: m["aggregate"]["mrr"])
-    compare("Score separability", "sep", lambda m: m["aggregate"]["separability"])
-    compare("Average Precision", "ap", lambda m: m["calibration"]["average_precision"])
-    compare("Dynamic-k F1", "f1", lambda m: m["calibration"]["dynamic_k"]["f1"])
-    compare("False-answer rate", "far", lambda m: m["calibration"]["dynamic_k"]["false_answer_rate"], higher_better=False)
-    compare("Query latency (ms)", "lat", lambda m: m["timing"]["query_per_item_ms"], higher_better=False)
-
-    winner_key = keys[0] if wins[keys[0]] >= wins[keys[1]] else keys[1]
+    n_metrics = len(scorecard)
+    # recommend the model with the most metric wins; tie-break on nDCG@10
+    winner_key = max(keys, key=lambda k: (wins[k], models[k]["aggregate"]["ndcg@10"]))
     winner = models[winner_key]["name"]
 
-    rows = "".join(
-        f'<tr><td>{esc(lbl)}</td><td class="{"win" if w==keys[0] else ""}">{fmt(va)}</td>'
-        f'<td class="{"win" if w==keys[1] else ""}">{fmt(vb)}</td>'
-        f'<td>{esc(models[w]["name"]) if w!="tie" else "tie"}</td></tr>'
-        for lbl, va, vb, w in scorecard
-    )
-    table = (
-        f'<table><thead><tr><th>Metric</th><th>{esc(a["name"])}</th>'
-        f'<th>{esc(b["name"])}</th><th>Winner</th></tr></thead><tbody>{rows}</tbody></table>'
-    )
+    header = ("<tr><th>Metric</th>"
+              + "".join(f"<th>{esc(models[k]['name'])}</th>" for k in keys)
+              + "<th>Best</th></tr>")
+    body = []
+    for label, vals, win in scorecard:
+        cells = "".join(f'<td class="{"win" if win == k else ""}">{fmt(vals[k])}</td>' for k in keys)
+        best_txt = esc(models[win]["name"]) if win else "tie"
+        body.append(f"<tr><td>{esc(label)}</td>{cells}<td>{best_txt}</td></tr>")
+    wins_cells = "".join(f"<td><b>{wins[k]}</b></td>" for k in keys)
+    body.append(f'<tr><td><b>Metrics won</b></td>{wins_cells}<td></td></tr>')
+    table = (f'<div class="scroll"><table><thead>{header}</thead>'
+             f'<tbody>{"".join(body)}</tbody></table></div>')
+
     notes = [
-        f"<b>Recommended: {esc(winner)}</b> — wins {wins[winner_key]} of {len(scorecard)} head-to-head metrics on this English-only corpus.",
-        "Both models achieve near-ceiling ranking quality here, so the deciding factors are <b>score separability</b> (how safely you can set a similarity cutoff) and operational cost.",
-        "Because the two models live on different cosine scales, each must use its <b>own</b> calibrated threshold τ (see calibration section) — never share one cutoff between them.",
+        f"<b>Recommended: {esc(winner)}</b> — best in {wins[winner_key]} of {n_metrics} "
+        f"comparison metrics across the {len(keys)} models on this English-only corpus.",
+        "The models cluster near-ceiling on ranking quality here, so the deciding factors are "
+        "<b>score separability</b> (how safely you can set a similarity cutoff) and operational "
+        "cost (latency, model size).",
+        "Each model sits on its own cosine scale, so each needs its <b>own</b> calibrated "
+        "threshold τ (see the calibration section) — never share a single cutoff across models.",
     ]
     return table, notes
 
@@ -390,7 +408,7 @@ def build_html(results) -> str:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Embedding Model Comparison Report</title><style>{CSS}</style></head><body>
 <h1>Embedding Model Comparison &mdash; Top-k Retrieval</h1>
-<p class="sub">{esc(models['minilm']['name'])} vs. {esc(models['e5']['name'])} &middot;
+<p class="sub">{esc(" vs. ".join(m["name"] for m in models.values()))} &middot;
 {ds['meta']['n_passages']} passages, {ds['meta']['n_queries']} queries across {ncats} categories &middot;
 English-only, mixed general knowledge &middot; generated {esc(results['generated_at'][:19])} UTC</p>
 

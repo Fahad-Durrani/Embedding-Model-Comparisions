@@ -10,10 +10,13 @@ Models under test:
 |-----|-------|-------------------|-----|--------|
 | `minilm` | [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | none | 384 | ~22M |
 | `e5` | [`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small) | `query:` / `passage:` | 384 | ~118M |
+| `f2llm` | [`codefuse-ai/F2LLM-v2-80M`](https://huggingface.co/codefuse-ai/F2LLM-v2-80M) | `Instruct: …\nQuery: ` on query only | 320 | ~80M |
 
-> **Fairness matters.** e5 *requires* `query:` / `passage:` prefixes; MiniLM uses
-> none. The harness applies each model's own convention automatically — skipping
-> the e5 prefixes is the most common way people accidentally cripple it.
+> **Fairness matters.** Each model has its own convention: e5 *requires*
+> `query:` / `passage:` prefixes; F2LLM *requires* an `Instruct: …\nQuery: `
+> instruction on the query (documents unprefixed); MiniLM uses none. The harness
+> applies each model's own convention automatically — skipping these prefixes is
+> the most common way people accidentally cripple a model.
 
 ## Quick start
 

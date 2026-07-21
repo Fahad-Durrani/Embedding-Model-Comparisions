@@ -52,6 +52,17 @@ MODELS = [
         "dim": 384,
         "params": "~118M",
     },
+    # F2LLM-v2-80M: last-token-pooled LLM embedder. Retrieval convention is an
+    # instruction prefix on the QUERY only; passages get no prefix.
+    {
+        "key": "f2llm",
+        "name": "F2LLM-v2-80M",
+        "hf_id": "codefuse-ai/F2LLM-v2-80M",
+        "query_prefix": "Instruct: Given a question, retrieve passages that can help answer the question.\nQuery: ",
+        "passage_prefix": "",
+        "dim": 320,
+        "params": "~80M",
+    },
 ]
 
 # --------------------------------------------------------------------------- #
