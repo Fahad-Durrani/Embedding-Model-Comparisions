@@ -1,22 +1,35 @@
 # Embedding Model Comparison Harness
 
-Side-by-side benchmark of two sentence-embedding models for a **top-k chunk
+Side-by-side benchmark of five embedding models for a **top-k chunk
 retrieval** pipeline, with per-query scores, threshold calibration, a deployable
 dynamic-k policy, and a detailed HTML report.
 
 Models under test:
 
-| key | model | prefix convention | dim | params |
-|-----|-------|-------------------|-----|--------|
-| `minilm` | [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | none | 384 | ~22M |
-| `e5` | [`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small) | `query:` / `passage:` | 384 | ~118M |
-| `f2llm` | [`codefuse-ai/F2LLM-v2-80M`](https://huggingface.co/codefuse-ai/F2LLM-v2-80M) | `Instruct: …\nQuery: ` on query only | 320 | ~80M |
+| key | model | backend | prefix convention | dim | params |
+|-----|-------|---------|-------------------|-----|--------|
+| `minilm` | [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | sentence-transformers | none | 384 | ~22M |
+| `e5` | [`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small) | sentence-transformers | `query:` / `passage:` | 384 | ~118M |
+| `f2llm` | [`codefuse-ai/F2LLM-v2-80M`](https://huggingface.co/codefuse-ai/F2LLM-v2-80M) | sentence-transformers | `Instruct: …\nQuery: ` on query only | 320 | ~80M |
+| `gecko_f32` | [`litert-community/Gecko-110m-en`](https://huggingface.co/litert-community/Gecko-110m-en) (`Gecko_512_f32.tflite`) | LiteRT / TFLite | none | 768 | ~110M |
+| `gecko_quant` | [`litert-community/Gecko-110m-en`](https://huggingface.co/litert-community/Gecko-110m-en) (`Gecko_512_quant.tflite`) | LiteRT / TFLite | none | 768 | ~110M (int8) |
 
 > **Fairness matters.** Each model has its own convention: e5 *requires*
 > `query:` / `passage:` prefixes; F2LLM *requires* an `Instruct: …\nQuery: `
-> instruction on the query (documents unprefixed); MiniLM uses none. The harness
-> applies each model's own convention automatically — skipping these prefixes is
-> the most common way people accidentally cripple a model.
+> instruction on the query (documents unprefixed); MiniLM and Gecko use none. The
+> harness applies each model's own convention automatically — skipping these
+> prefixes is the most common way people accidentally cripple a model.
+
+> **Two backends.** The first three run under batched PyTorch via
+> [`sentence-transformers`](https://www.sbert.net/). The two `Gecko-110m-en`
+> variants are **on-device LiteRT/TFLite** models (float32 and dynamic-int8 of the
+> same 512-token model) run through a TFLite interpreter with a SentencePiece
+> tokenizer — see [`src/embedder.py`](src/embedder.py) (`LiteRTEmbedder`). Their
+> `.tflite` weights (~570 MB) are downloaded on first run into a gitignored
+> `models/` dir by [`src/model_store.py`](src/model_store.py). Because they run
+> single-item on CPU with fixed 512-token padding, treat their **latency** as
+> on-device edge timing, not a throughput comparison against the PyTorch models;
+> retrieval-**quality** metrics remain directly comparable.
 
 ## Quick start
 
@@ -79,15 +92,17 @@ relevance-grade cutoff for binary metrics.
 ## Files
 
 ```
-config.py               # all configuration
+config.py               # all configuration (incl. per-model backend)
 data/build_dataset.py   # deterministic synthetic dataset generator
 data/dataset.json        # corpus + queries + qrels (generated)
-src/embedder.py         # model wrapper: prefixes, normalize, timing
+src/embedder.py         # Embedder + LiteRTEmbedder backends, make_embedder factory
+src/model_store.py      # lazy HuggingFace download of TFLite weights + tokenizer
 src/retriever.py        # cosine top-k retrieval
 src/metrics.py          # recall/precision/hit/MRR/nDCG/separability
 src/calibrate.py        # threshold sweep, PR curve, dynamic-k simulation
 src/evaluate.py         # MAIN runner -> results/results.json + CSVs
 src/report.py           # HTML report + charts
+models/                 # downloaded TFLite weights (generated, gitignored)
 results/                # generated: results.json, aggregate.csv, per_query.csv, report.html
 ```
 
@@ -95,6 +110,11 @@ results/                # generated: results.json, aggregate.csv, per_query.csv,
 
 - Synthetic 50-passage corpus: absolute metrics are optimistic; trust the
   *relative* comparison. Swap in real data for production decisions.
-- CPU-only latency figures are indicative, not throughput benchmarks.
+- CPU-only latency figures are indicative, not throughput benchmarks. The Gecko
+  TFLite models run single-item with fixed 512-token padding, so their latency is
+  on-device edge timing and **not** comparable head-to-head with the batched
+  PyTorch models; quality metrics are comparable.
 - The corpus is **English-only**, so e5's multilingual capability is not tested
   here. Re-run with a multilingual corpus if that matches your workload.
+- The Gecko task-prefix convention for on-device use is undocumented; both
+  variants use empty prefixes here. See the `VERIFY` notes in `src/embedder.py`.
