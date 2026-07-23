@@ -25,6 +25,7 @@ import config  # noqa: E402
 PALETTE = {
     "minilm": "#2563eb",       # blue
     "e5": "#d97706",           # amber
+    "granite": "#0891b2",      # cyan
     "f2llm": "#059669",        # green
     "gecko_f32": "#7c3aed",    # violet
     "gecko_quant": "#db2777",  # pink

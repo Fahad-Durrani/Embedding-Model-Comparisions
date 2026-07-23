@@ -59,6 +59,17 @@ MODELS = [
         "dim": 384,
         "params": "~118M",
     },
+    # granite-embedding-97m-multilingual-r2: IBM multilingual sentence encoder,
+    # CLS-pooled, used with plain text (no query/passage prefixes).
+    {
+        "key": "granite",
+        "name": "granite-embedding-97m-multilingual-r2",
+        "hf_id": "ibm-granite/granite-embedding-97m-multilingual-r2",
+        "query_prefix": "",
+        "passage_prefix": "",
+        "dim": 384,
+        "params": "~97M",
+    },
     # F2LLM-v2-80M: last-token-pooled LLM embedder. Retrieval convention is an
     # instruction prefix on the QUERY only; passages get no prefix.
     {

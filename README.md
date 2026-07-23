@@ -1,6 +1,6 @@
 # Embedding Model Comparison Harness
 
-Side-by-side benchmark of five embedding models for a **top-k chunk
+Side-by-side benchmark of six embedding models for a **top-k chunk
 retrieval** pipeline, with per-query scores, threshold calibration, a deployable
 dynamic-k policy, and a detailed HTML report.
 
@@ -10,15 +10,16 @@ Models under test:
 |-----|-------|---------|-------------------|-----|--------|
 | `minilm` | [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | sentence-transformers | none | 384 | ~22M |
 | `e5` | [`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small) | sentence-transformers | `query:` / `passage:` | 384 | ~118M |
+| `granite` | [`ibm-granite/granite-embedding-97m-multilingual-r2`](https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2) | sentence-transformers | none | 384 | ~97M |
 | `f2llm` | [`codefuse-ai/F2LLM-v2-80M`](https://huggingface.co/codefuse-ai/F2LLM-v2-80M) | sentence-transformers | `Instruct: …\nQuery: ` on query only | 320 | ~80M |
 | `gecko_f32` | [`litert-community/Gecko-110m-en`](https://huggingface.co/litert-community/Gecko-110m-en) (`Gecko_512_f32.tflite`) | LiteRT / TFLite | none | 768 | ~110M |
 | `gecko_quant` | [`litert-community/Gecko-110m-en`](https://huggingface.co/litert-community/Gecko-110m-en) (`Gecko_512_quant.tflite`) | LiteRT / TFLite | none | 768 | ~110M (int8) |
 
 > **Fairness matters.** Each model has its own convention: e5 *requires*
 > `query:` / `passage:` prefixes; F2LLM *requires* an `Instruct: …\nQuery: `
-> instruction on the query (documents unprefixed); MiniLM and Gecko use none. The
-> harness applies each model's own convention automatically — skipping these
-> prefixes is the most common way people accidentally cripple a model.
+> instruction on the query (documents unprefixed); MiniLM, Granite, and Gecko use
+> none. The harness applies each model's own convention automatically — skipping
+> these prefixes is the most common way people accidentally cripple a model.
 
 > **Two backends.** The first three run under batched PyTorch via
 > [`sentence-transformers`](https://www.sbert.net/). The two `Gecko-110m-en`

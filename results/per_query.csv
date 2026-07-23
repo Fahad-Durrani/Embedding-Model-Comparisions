@@ -3,199 +3,239 @@ q01,exact_paraphrase,How do plants make their own food using sunlight?,F2LLM-v2-
 q01,exact_paraphrase,How do plants make their own food using sunlight?,Gecko-110m-en (f32),1.0,p01,0.7348,1.0,1.0,1.0,0.7348343133926392,0.2327185869216919
 q01,exact_paraphrase,How do plants make their own food using sunlight?,Gecko-110m-en (int8),1.0,p01,0.7261,1.0,1.0,1.0,0.7260597944259644,0.23210564255714417
 q01,exact_paraphrase,How do plants make their own food using sunlight?,all-MiniLM-L6-v2,1.0,p01,0.6717,1.0,1.0,1.0,0.6717255115509033,0.27651578187942505
+q01,exact_paraphrase,How do plants make their own food using sunlight?,granite-embedding-97m-multilingual-r2,1.0,p01,0.9035,1.0,1.0,1.0,0.90352863073349,0.08069312572479248
 q01,exact_paraphrase,How do plants make their own food using sunlight?,multilingual-e5-small,1.0,p01,0.886,1.0,1.0,1.0,0.8860390782356262,0.01368802785873413
 q02,exact_paraphrase,When did humans first walk on the Moon?,F2LLM-v2-80M,1.0,p09,0.719,1.0,1.0,1.0,0.7190008163452148,0.49997901916503906
 q02,exact_paraphrase,When did humans first walk on the Moon?,Gecko-110m-en (f32),1.0,p09,0.732,1.0,1.0,1.0,0.7319529056549072,0.19623416662216187
 q02,exact_paraphrase,When did humans first walk on the Moon?,Gecko-110m-en (int8),1.0,p09,0.7276,1.0,1.0,1.0,0.727626383304596,0.2004910111427307
 q02,exact_paraphrase,When did humans first walk on the Moon?,all-MiniLM-L6-v2,1.0,p09,0.7411,1.0,1.0,1.0,0.7411370277404785,0.48136430978775024
+q02,exact_paraphrase,When did humans first walk on the Moon?,granite-embedding-97m-multilingual-r2,1.0,p09,0.943,1.0,1.0,1.0,0.9429848194122314,0.1597667932510376
 q02,exact_paraphrase,When did humans first walk on the Moon?,multilingual-e5-small,1.0,p09,0.8893,1.0,1.0,1.0,0.8893005847930908,0.10812878608703613
 q03,exact_paraphrase,What is the tallest mountain on Earth?,F2LLM-v2-80M,1.0,p19,0.7536,1.0,1.0,1.0,0.7536405324935913,0.12148815393447876
 q03,exact_paraphrase,What is the tallest mountain on Earth?,Gecko-110m-en (f32),1.0,p19,0.7433,1.0,1.0,1.0,0.7433075904846191,0.09084677696228027
 q03,exact_paraphrase,What is the tallest mountain on Earth?,Gecko-110m-en (int8),1.0,p19,0.7406,1.0,1.0,1.0,0.7405807971954346,0.08746707439422607
 q03,exact_paraphrase,What is the tallest mountain on Earth?,all-MiniLM-L6-v2,1.0,p19,0.7026,1.0,1.0,1.0,0.7026214599609375,0.10641193389892578
+q03,exact_paraphrase,What is the tallest mountain on Earth?,granite-embedding-97m-multilingual-r2,1.0,p19,0.9426,1.0,1.0,1.0,0.9426230788230896,0.06121164560317993
 q03,exact_paraphrase,What is the tallest mountain on Earth?,multilingual-e5-small,1.0,p19,0.8799,1.0,1.0,1.0,0.8798900246620178,0.017719686031341553
 q04,semantic,What organ pushes blood around the body?,F2LLM-v2-80M,1.0,p03,0.5628,1.0,1.0,1.0,0.5627909302711487,0.3409387469291687
 q04,semantic,What organ pushes blood around the body?,Gecko-110m-en (f32),1.0,p03,0.6351,1.0,1.0,1.0,0.6350816488265991,0.09644663333892822
 q04,semantic,What organ pushes blood around the body?,Gecko-110m-en (int8),1.0,p03,0.629,1.0,1.0,1.0,0.6289860010147095,0.09240907430648804
 q04,semantic,What organ pushes blood around the body?,all-MiniLM-L6-v2,1.0,p03,0.6056,1.0,1.0,1.0,0.6055664420127869,0.37175601720809937
+q04,semantic,What organ pushes blood around the body?,granite-embedding-97m-multilingual-r2,1.0,p03,0.9044,1.0,1.0,1.0,0.904428243637085,0.11457103490829468
 q04,semantic,What organ pushes blood around the body?,multilingual-e5-small,1.0,p03,0.867,1.0,1.0,1.0,0.8670423626899719,0.05749577283859253
 q05,semantic,Why is the planet heating up?,F2LLM-v2-80M,1.0,p08,0.511,1.0,1.0,1.0,0.5109770894050598,0.14095038175582886
 q05,semantic,Why is the planet heating up?,Gecko-110m-en (f32),1.0,p08,0.6717,1.0,1.0,1.0,0.6717245578765869,0.12914681434631348
 q05,semantic,Why is the planet heating up?,Gecko-110m-en (int8),1.0,p08,0.6727,1.0,1.0,1.0,0.6726903915405273,0.13435310125350952
 q05,semantic,Why is the planet heating up?,all-MiniLM-L6-v2,1.0,p08,0.4936,1.0,1.0,1.0,0.4935758709907532,0.12126362323760986
+q05,semantic,Why is the planet heating up?,granite-embedding-97m-multilingual-r2,1.0,p08,0.8509,1.0,1.0,1.0,0.8508996367454529,0.015312254428863525
 q05,semantic,Why is the planet heating up?,multilingual-e5-small,1.0,p08,0.8833,1.0,1.0,1.0,0.8833019733428955,0.018520772457122803
 q06,semantic,Which coding language was named after a comedy troupe?,F2LLM-v2-80M,1.0,p23,0.3855,1.0,1.0,1.0,0.38546860218048096,0.22613801062107086
 q06,semantic,Which coding language was named after a comedy troupe?,Gecko-110m-en (f32),1.0,p23,0.6148,1.0,1.0,1.0,0.6148393154144287,0.1512492597103119
 q06,semantic,Which coding language was named after a comedy troupe?,Gecko-110m-en (int8),1.0,p23,0.6088,1.0,1.0,1.0,0.6087573766708374,0.15727800130844116
 q06,semantic,Which coding language was named after a comedy troupe?,all-MiniLM-L6-v2,1.0,p23,0.4455,1.0,1.0,1.0,0.44553765654563904,0.23259243369102478
+q06,semantic,Which coding language was named after a comedy troupe?,granite-embedding-97m-multilingual-r2,1.0,p23,0.8628,1.0,1.0,1.0,0.8627747893333435,0.0941704511642456
 q06,semantic,Which coding language was named after a comedy troupe?,multilingual-e5-small,1.0,p23,0.8338,1.0,1.0,1.0,0.8337895274162292,0.07246822118759155
 q07,semantic,How can we generate electricity from the sun?,F2LLM-v2-80M,1.0,p38,0.6407,1.0,1.0,1.0,0.6406875848770142,0.23224279284477234
 q07,semantic,How can we generate electricity from the sun?,Gecko-110m-en (f32),1.0,p38,0.5593,1.0,1.0,1.0,0.5592989325523376,0.008130669593811035
 q07,semantic,How can we generate electricity from the sun?,Gecko-110m-en (int8),1.0,p38,0.5574,1.0,1.0,1.0,0.5574136972427368,0.013996720314025879
 q07,semantic,How can we generate electricity from the sun?,all-MiniLM-L6-v2,1.0,p38,0.6247,1.0,1.0,1.0,0.6246522665023804,0.2292872965335846
+q07,semantic,How can we generate electricity from the sun?,granite-embedding-97m-multilingual-r2,1.0,p38,0.8697,1.0,1.0,1.0,0.8696705102920532,0.037126779556274414
 q07,semantic,How can we generate electricity from the sun?,multilingual-e5-small,1.0,p38,0.8958,1.0,1.0,1.0,0.895775318145752,0.042234957218170166
 q08,partial_related,What does caffeine do to the body?,F2LLM-v2-80M,1.0,p49,0.696,1.0,1.0,1.0,0.6959846615791321,0.41185328364372253
 q08,partial_related,What does caffeine do to the body?,Gecko-110m-en (f32),1.0,p49,0.8528,1.0,1.0,1.0,0.8527785539627075,0.42855846881866455
 q08,partial_related,What does caffeine do to the body?,Gecko-110m-en (int8),1.0,p49,0.8519,1.0,1.0,1.0,0.8519420623779297,0.43682223558425903
 q08,partial_related,What does caffeine do to the body?,all-MiniLM-L6-v2,1.0,p49,0.7199,1.0,1.0,1.0,0.7199438810348511,0.5073022693395615
+q08,partial_related,What does caffeine do to the body?,granite-embedding-97m-multilingual-r2,1.0,p49,0.9383,1.0,1.0,1.0,0.9382913112640381,0.15316247940063477
 q08,partial_related,What does caffeine do to the body?,multilingual-e5-small,1.0,p49,0.8889,1.0,1.0,1.0,0.8889106512069702,0.07431870698928833
 q09,partial_related,Famous paintings by Italian artists,F2LLM-v2-80M,1.0,p43,0.5105,1.0,1.0,1.0,0.5105013251304626,0.34323254227638245
 q09,partial_related,Famous paintings by Italian artists,Gecko-110m-en (f32),1.0,p43,0.4809,1.0,1.0,1.0,0.4808778762817383,0.07248583436012268
 q09,partial_related,Famous paintings by Italian artists,Gecko-110m-en (int8),1.0,p43,0.477,1.0,1.0,1.0,0.4770233929157257,0.06817829608917236
 q09,partial_related,Famous paintings by Italian artists,all-MiniLM-L6-v2,1.0,p43,0.5843,1.0,1.0,1.0,0.5843351483345032,0.4348602294921875
+q09,partial_related,Famous paintings by Italian artists,granite-embedding-97m-multilingual-r2,1.0,p43,0.8568,1.0,1.0,1.0,0.8567765951156616,0.10026109218597412
 q09,partial_related,Famous paintings by Italian artists,multilingual-e5-small,1.0,p43,0.8628,1.0,1.0,1.0,0.8628149032592773,0.0760730504989624
 q10,partial_related,Tall mountains in Africa,F2LLM-v2-80M,1.0,p47,0.6365,1.0,1.0,1.0,0.6364593505859375,0.28901827335357666
 q10,partial_related,Tall mountains in Africa,Gecko-110m-en (f32),1.0,p47,0.5978,1.0,1.0,1.0,0.597770631313324,0.07443803548812866
 q10,partial_related,Tall mountains in Africa,Gecko-110m-en (int8),1.0,p47,0.596,1.0,1.0,1.0,0.5960241556167603,0.08431446552276611
 q10,partial_related,Tall mountains in Africa,all-MiniLM-L6-v2,1.0,p47,0.6934,1.0,1.0,1.0,0.6934102773666382,0.1862337589263916
+q10,partial_related,Tall mountains in Africa,granite-embedding-97m-multilingual-r2,1.0,p47,0.8926,1.0,1.0,1.0,0.8926416635513306,0.06459403038024902
 q10,partial_related,Tall mountains in Africa,multilingual-e5-small,1.0,p47,0.8869,1.0,1.0,1.0,0.8869233727455139,0.04546231031417847
 q11,partial_related,What is the longest river in the world?,F2LLM-v2-80M,1.0,p48,0.7229,1.0,0.9638614719361266,1.0,0.7228593826293945,0.28983616828918457
 q11,partial_related,What is the longest river in the world?,Gecko-110m-en (f32),1.0,p48,0.8097,1.0,0.9220433016555235,1.0,0.8097219467163086,0.22339463233947754
 q11,partial_related,What is the longest river in the world?,Gecko-110m-en (int8),1.0,p48,0.8098,1.0,0.9220433016555235,1.0,0.8098104000091553,0.22376900911331177
 q11,partial_related,What is the longest river in the world?,all-MiniLM-L6-v2,1.0,p48,0.679,1.0,0.894632015448076,1.0,0.6789565086364746,0.2537245750427246
+q11,partial_related,What is the longest river in the world?,granite-embedding-97m-multilingual-r2,1.0,p48,0.9326,1.0,0.9467676761267002,1.0,0.9326049089431763,0.0916898250579834
 q11,partial_related,What is the longest river in the world?,multilingual-e5-small,1.0,p48,0.8884,1.0,0.9326285831096983,1.0,0.8883788585662842,0.07450145483016968
 q12,no_match,Best recipe for chocolate chip cookies,F2LLM-v2-80M,,p22,0.0988,,,,0.09876136481761932,
 q12,no_match,Best recipe for chocolate chip cookies,Gecko-110m-en (f32),,p44,0.2839,,,,0.2838810682296753,
 q12,no_match,Best recipe for chocolate chip cookies,Gecko-110m-en (int8),,p44,0.2796,,,,0.2795746624469757,
 q12,no_match,Best recipe for chocolate chip cookies,all-MiniLM-L6-v2,,p50,0.1334,,,,0.1333818882703781,
+q12,no_match,Best recipe for chocolate chip cookies,granite-embedding-97m-multilingual-r2,,p33,0.7362,,,,0.7362128496170044,
 q12,no_match,Best recipe for chocolate chip cookies,multilingual-e5-small,,p33,0.7675,,,,0.7675327062606812,
 q13,no_match,How do I change a flat car tire?,F2LLM-v2-80M,,p16,0.1475,,,,0.1475284993648529,
 q13,no_match,How do I change a flat car tire?,Gecko-110m-en (f32),,p37,0.4643,,,,0.4643280506134033,
 q13,no_match,How do I change a flat car tire?,Gecko-110m-en (int8),,p37,0.4547,,,,0.4546912908554077,
 q13,no_match,How do I change a flat car tire?,all-MiniLM-L6-v2,,p05,0.1079,,,,0.10792490839958191,
+q13,no_match,How do I change a flat car tire?,granite-embedding-97m-multilingual-r2,,p37,0.7395,,,,0.7395073771476746,
 q13,no_match,How do I change a flat car tire?,multilingual-e5-small,,p37,0.7848,,,,0.7847542762756348,
 q14,no_match,What is the current stock price of Apple?,F2LLM-v2-80M,,p16,0.1392,,,,0.13920408487319946,
 q14,no_match,What is the current stock price of Apple?,Gecko-110m-en (f32),,p22,0.3871,,,,0.38711434602737427,
 q14,no_match,What is the current stock price of Apple?,Gecko-110m-en (int8),,p22,0.3825,,,,0.3824867010116577,
 q14,no_match,What is the current stock price of Apple?,all-MiniLM-L6-v2,,p25,0.132,,,,0.13199269771575928,
+q14,no_match,What is the current stock price of Apple?,granite-embedding-97m-multilingual-r2,,p10,0.7444,,,,0.7443922758102417,
 q14,no_match,What is the current stock price of Apple?,multilingual-e5-small,,p25,0.7411,,,,0.7410643100738525,
 q15,no_match,Explain the rules of cricket batting,F2LLM-v2-80M,,p35,0.2102,,,,0.2102244794368744,
 q15,no_match,Explain the rules of cricket batting,Gecko-110m-en (f32),,p25,0.4007,,,,0.4006626009941101,
 q15,no_match,Explain the rules of cricket batting,Gecko-110m-en (int8),,p25,0.3976,,,,0.3976457118988037,
 q15,no_match,Explain the rules of cricket batting,all-MiniLM-L6-v2,,p35,0.23,,,,0.23003101348876953,
+q15,no_match,Explain the rules of cricket batting,granite-embedding-97m-multilingual-r2,,p35,0.7658,,,,0.765845775604248,
 q15,no_match,Explain the rules of cricket batting,multilingual-e5-small,,p35,0.8144,,,,0.8144220113754272,
 q16,no_match,How do I house-train a puppy?,F2LLM-v2-80M,,p03,0.1745,,,,0.17451399564743042,
 q16,no_match,How do I house-train a puppy?,Gecko-110m-en (f32),,p02,0.4444,,,,0.4443508982658386,
 q16,no_match,How do I house-train a puppy?,Gecko-110m-en (int8),,p02,0.4381,,,,0.4381342828273773,
 q16,no_match,How do I house-train a puppy?,all-MiniLM-L6-v2,,p31,0.1352,,,,0.13519412279129028,
+q16,no_match,How do I house-train a puppy?,granite-embedding-97m-multilingual-r2,,p24,0.7256,,,,0.7256070375442505,
 q16,no_match,How do I house-train a puppy?,multilingual-e5-small,,p07,0.7954,,,,0.7954012751579285,
 q17,edge_negation,A programming language that is not Python,F2LLM-v2-80M,2.0,p23,0.6765,1.0,0.6309297535714575,0.5,0.6765184998512268,-0.3610278367996216
 q17,edge_negation,A programming language that is not Python,Gecko-110m-en (f32),2.0,p23,0.599,1.0,0.6309297535714575,0.5,0.5989975929260254,-0.07435119152069092
 q17,edge_negation,A programming language that is not Python,Gecko-110m-en (int8),2.0,p23,0.5935,1.0,0.6309297535714575,0.5,0.5934727191925049,-0.06850922107696533
 q17,edge_negation,A programming language that is not Python,all-MiniLM-L6-v2,2.0,p23,0.7262,1.0,0.6309297535714575,0.5,0.7261707186698914,-0.3709702491760254
+q17,edge_negation,A programming language that is not Python,granite-embedding-97m-multilingual-r2,2.0,p23,0.9187,1.0,0.6309297535714575,0.5,0.9186524748802185,-0.06012469530105591
 q17,edge_negation,A programming language that is not Python,multilingual-e5-small,2.0,p23,0.8689,1.0,0.6309297535714575,0.5,0.8688876628875732,-0.04568403959274292
 q18,edge_negation,Common animals that are not mammals,F2LLM-v2-80M,1.0,p41,0.2023,1.0,0.8519590445170673,1.0,0.20225867629051208,0.06674782931804657
 q18,edge_negation,Common animals that are not mammals,Gecko-110m-en (f32),1.0,p40,0.3734,1.0,0.9010126104210695,1.0,0.37342020869255066,0.026852846145629883
 q18,edge_negation,Common animals that are not mammals,Gecko-110m-en (int8),1.0,p40,0.3694,1.0,0.9010126104210695,1.0,0.36937466263771057,0.023941367864608765
 q18,edge_negation,Common animals that are not mammals,all-MiniLM-L6-v2,1.0,p41,0.3273,0.6666666666666666,0.7653606369886217,1.0,0.3272744417190552,0.18519124388694763
+q18,edge_negation,Common animals that are not mammals,granite-embedding-97m-multilingual-r2,1.0,p41,0.7984,1.0,0.9674679834891693,1.0,0.7983938455581665,0.03361046314239502
 q18,edge_negation,Common animals that are not mammals,multilingual-e5-small,1.0,p41,0.8405,1.0,1.0,1.0,0.8404875993728638,0.032978951930999756
 q19,edge_negation,Hot drinks that contain no caffeine,F2LLM-v2-80M,,p33,0.4777,,,,0.4776779115200043,
 q19,edge_negation,Hot drinks that contain no caffeine,Gecko-110m-en (f32),,p49,0.5808,,,,0.5807520747184753,
 q19,edge_negation,Hot drinks that contain no caffeine,Gecko-110m-en (int8),,p49,0.5811,,,,0.5810877084732056,
 q19,edge_negation,Hot drinks that contain no caffeine,all-MiniLM-L6-v2,,p34,0.4501,,,,0.450054407119751,
+q19,edge_negation,Hot drinks that contain no caffeine,granite-embedding-97m-multilingual-r2,,p33,0.873,,,,0.8730188608169556,
 q19,edge_negation,Hot drinks that contain no caffeine,multilingual-e5-small,,p33,0.8554,,,,0.855438768863678,
 q20,edge_lexical_trap,Using the Python programming language for data science,F2LLM-v2-80M,1.0,p23,0.5816,1.0,1.0,1.0,0.5815874934196472,0.3949428051710129
 q20,edge_lexical_trap,Using the Python programming language for data science,Gecko-110m-en (f32),1.0,p23,0.7,1.0,1.0,1.0,0.6999595165252686,0.17909139394760132
 q20,edge_lexical_trap,Using the Python programming language for data science,Gecko-110m-en (int8),1.0,p23,0.6941,1.0,1.0,1.0,0.6940871477127075,0.17794370651245117
 q20,edge_lexical_trap,Using the Python programming language for data science,all-MiniLM-L6-v2,1.0,p23,0.6276,1.0,1.0,1.0,0.6275746822357178,0.4001656770706177
+q20,edge_lexical_trap,Using the Python programming language for data science,granite-embedding-97m-multilingual-r2,1.0,p23,0.9047,1.0,1.0,1.0,0.9047458171844482,0.09508872032165527
 q20,edge_lexical_trap,Using the Python programming language for data science,multilingual-e5-small,1.0,p23,0.8751,1.0,1.0,1.0,0.8751302361488342,0.057467103004455566
 q21,edge_lexical_trap,The grassy bank at the edge of a river,F2LLM-v2-80M,1.0,p27,0.6474,1.0,1.0,1.0,0.6473731994628906,0.38881975412368774
 q21,edge_lexical_trap,The grassy bank at the edge of a river,Gecko-110m-en (f32),1.0,p27,0.7706,1.0,1.0,1.0,0.7705636024475098,0.1196088194847107
 q21,edge_lexical_trap,The grassy bank at the edge of a river,Gecko-110m-en (int8),1.0,p27,0.7753,1.0,1.0,1.0,0.7752621173858643,0.1222529411315918
 q21,edge_lexical_trap,The grassy bank at the edge of a river,all-MiniLM-L6-v2,1.0,p27,0.7202,1.0,1.0,1.0,0.720150351524353,0.3082117438316345
+q21,edge_lexical_trap,The grassy bank at the edge of a river,granite-embedding-97m-multilingual-r2,1.0,p27,0.929,1.0,1.0,1.0,0.9289635419845581,0.1123349666595459
 q21,edge_lexical_trap,The grassy bank at the edge of a river,multilingual-e5-small,1.0,p27,0.8733,1.0,1.0,1.0,0.873309850692749,0.054169416427612305
 q22,edge_lexical_trap,Where can I deposit money and open an account?,F2LLM-v2-80M,1.0,p28,0.3466,1.0,1.0,1.0,0.3465733826160431,0.14146530628204346
 q22,edge_lexical_trap,Where can I deposit money and open an account?,Gecko-110m-en (f32),1.0,p28,0.6431,1.0,1.0,1.0,0.6430994272232056,0.15751641988754272
 q22,edge_lexical_trap,Where can I deposit money and open an account?,Gecko-110m-en (int8),1.0,p28,0.6373,1.0,1.0,1.0,0.6373496055603027,0.15619874000549316
 q22,edge_lexical_trap,Where can I deposit money and open an account?,all-MiniLM-L6-v2,1.0,p28,0.543,1.0,1.0,1.0,0.5430043935775757,0.333044171333313
+q22,edge_lexical_trap,Where can I deposit money and open an account?,granite-embedding-97m-multilingual-r2,1.0,p28,0.8503,1.0,1.0,1.0,0.8502751588821411,0.111183762550354
 q22,edge_lexical_trap,Where can I deposit money and open an account?,multilingual-e5-small,1.0,p28,0.8636,1.0,1.0,1.0,0.8636305332183838,0.05043238401412964
 q23,edge_lexical_trap,The island of Java in Indonesia,F2LLM-v2-80M,1.0,p26,0.7733,1.0,1.0,1.0,0.7733019590377808,0.3650381565093994
 q23,edge_lexical_trap,The island of Java in Indonesia,Gecko-110m-en (f32),1.0,p26,0.8703,1.0,1.0,1.0,0.8702925443649292,0.2839898467063904
 q23,edge_lexical_trap,The island of Java in Indonesia,Gecko-110m-en (int8),1.0,p26,0.8745,1.0,1.0,1.0,0.8745028376579285,0.2872709631919861
 q23,edge_lexical_trap,The island of Java in Indonesia,all-MiniLM-L6-v2,1.0,p26,0.8276,1.0,1.0,1.0,0.8276211023330688,0.3412131071090698
+q23,edge_lexical_trap,The island of Java in Indonesia,granite-embedding-97m-multilingual-r2,1.0,p26,0.9719,1.0,1.0,1.0,0.9718831777572632,0.1307985782623291
 q23,edge_lexical_trap,The island of Java in Indonesia,multilingual-e5-small,1.0,p26,0.9068,1.0,1.0,1.0,0.9067564606666565,0.08576232194900513
 q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,F2LLM-v2-80M,1.0,p30,0.4988,1.0,1.0,1.0,0.4988224506378174,0.21076592803001404
 q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,Gecko-110m-en (f32),1.0,p30,0.5384,1.0,1.0,1.0,0.5384216904640198,0.1290486454963684
 q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,Gecko-110m-en (int8),1.0,p30,0.5414,1.0,1.0,1.0,0.5414422750473022,0.13079863786697388
 q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,all-MiniLM-L6-v2,1.0,p30,0.6386,1.0,1.0,1.0,0.638647735118866,0.295371949672699
+q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,granite-embedding-97m-multilingual-r2,1.0,p30,0.8899,1.0,1.0,1.0,0.8898794651031494,0.07980138063430786
 q24,edge_lexical_trap,Dark clouds gathering in the sky before rain,multilingual-e5-small,1.0,p30,0.8565,1.0,1.0,1.0,0.8564981818199158,0.06091421842575073
 q25,edge_numeric,What major event happened in 1969?,F2LLM-v2-80M,1.0,p09,0.3549,1.0,1.0,1.0,0.35489192605018616,0.14296101033687592
 q25,edge_numeric,What major event happened in 1969?,Gecko-110m-en (f32),1.0,p09,0.5628,1.0,1.0,1.0,0.5627709031105042,0.15749770402908325
 q25,edge_numeric,What major event happened in 1969?,Gecko-110m-en (int8),1.0,p09,0.5599,1.0,1.0,1.0,0.5598675608634949,0.1639813482761383
 q25,edge_numeric,What major event happened in 1969?,all-MiniLM-L6-v2,1.0,p09,0.2902,1.0,1.0,1.0,0.29020988941192627,0.02981346845626831
+q25,edge_numeric,What major event happened in 1969?,granite-embedding-97m-multilingual-r2,1.0,p09,0.7896,1.0,1.0,1.0,0.7896126508712769,0.0017088651657104492
 q25,edge_numeric,What major event happened in 1969?,multilingual-e5-small,1.0,p09,0.7878,1.0,1.0,1.0,0.7878347635269165,0.033213138580322266
 q26,edge_numeric,What is the value of pi to five decimal places?,F2LLM-v2-80M,1.0,p45,0.5907,1.0,1.0,1.0,0.5906847715377808,0.41844743490219116
 q26,edge_numeric,What is the value of pi to five decimal places?,Gecko-110m-en (f32),1.0,p45,0.7234,1.0,1.0,1.0,0.7233995199203491,0.30096662044525146
 q26,edge_numeric,What is the value of pi to five decimal places?,Gecko-110m-en (int8),1.0,p45,0.7208,1.0,1.0,1.0,0.7207658290863037,0.3064935803413391
 q26,edge_numeric,What is the value of pi to five decimal places?,all-MiniLM-L6-v2,1.0,p45,0.6999,1.0,1.0,1.0,0.699927806854248,0.5997244939208031
+q26,edge_numeric,What is the value of pi to five decimal places?,granite-embedding-97m-multilingual-r2,1.0,p45,0.914,1.0,1.0,1.0,0.9140444993972778,0.0939212441444397
 q26,edge_numeric,What is the value of pi to five decimal places?,multilingual-e5-small,1.0,p45,0.8556,1.0,1.0,1.0,0.8555888533592224,0.055400192737579346
 q27,edge_numeric,Which world war ended in 1945?,F2LLM-v2-80M,1.0,p13,0.7887,1.0,1.0,1.0,0.7886643409729004,0.5754416882991791
 q27,edge_numeric,Which world war ended in 1945?,Gecko-110m-en (f32),1.0,p13,0.7299,1.0,1.0,1.0,0.7298521399497986,0.3165771961212158
 q27,edge_numeric,Which world war ended in 1945?,Gecko-110m-en (int8),1.0,p13,0.7224,1.0,1.0,1.0,0.722392201423645,0.31061267852783203
 q27,edge_numeric,Which world war ended in 1945?,all-MiniLM-L6-v2,1.0,p13,0.7586,1.0,1.0,1.0,0.7586495280265808,0.5754668712615967
+q27,edge_numeric,Which world war ended in 1945?,granite-embedding-97m-multilingual-r2,1.0,p13,0.9259,1.0,1.0,1.0,0.9258976578712463,0.17383164167404175
 q27,edge_numeric,Which world war ended in 1945?,multilingual-e5-small,1.0,p13,0.9016,1.0,1.0,1.0,0.9015573859214783,0.12559258937835693
 q28,edge_numeric,In what year was the first powered airplane flight?,F2LLM-v2-80M,1.0,p50,0.6268,1.0,1.0,1.0,0.6268435120582581,0.23278707265853882
 q28,edge_numeric,In what year was the first powered airplane flight?,Gecko-110m-en (f32),1.0,p50,0.6633,1.0,1.0,1.0,0.6632694005966187,0.22285312414169312
 q28,edge_numeric,In what year was the first powered airplane flight?,Gecko-110m-en (int8),1.0,p50,0.6558,1.0,1.0,1.0,0.6557591557502747,0.2226124405860901
 q28,edge_numeric,In what year was the first powered airplane flight?,all-MiniLM-L6-v2,1.0,p50,0.68,1.0,1.0,1.0,0.6800183057785034,0.3299987316131592
+q28,edge_numeric,In what year was the first powered airplane flight?,granite-embedding-97m-multilingual-r2,1.0,p50,0.9215,1.0,1.0,1.0,0.9215209484100342,0.10570764541625977
 q28,edge_numeric,In what year was the first powered airplane flight?,multilingual-e5-small,1.0,p50,0.8621,1.0,1.0,1.0,0.862069845199585,0.0967869758605957
 q29,edge_typo,how does fotosynthesis wrok in plants,F2LLM-v2-80M,1.0,p01,0.4872,1.0,1.0,1.0,0.48722928762435913,0.24622170627117157
 q29,edge_typo,how does fotosynthesis wrok in plants,Gecko-110m-en (f32),1.0,p01,0.7552,1.0,1.0,1.0,0.7552262544631958,0.3401009440422058
 q29,edge_typo,how does fotosynthesis wrok in plants,Gecko-110m-en (int8),1.0,p01,0.7525,1.0,1.0,1.0,0.7524580955505371,0.3429127335548401
 q29,edge_typo,how does fotosynthesis wrok in plants,all-MiniLM-L6-v2,1.0,p01,0.5829,1.0,1.0,1.0,0.5829184055328369,0.31936946511268616
+q29,edge_typo,how does fotosynthesis wrok in plants,granite-embedding-97m-multilingual-r2,1.0,p01,0.9207,1.0,1.0,1.0,0.9207148551940918,0.13268554210662842
 q29,edge_typo,how does fotosynthesis wrok in plants,multilingual-e5-small,1.0,p01,0.8694,1.0,1.0,1.0,0.8694199919700623,0.06005138158798218
 q30,edge_typo,the tallest montain in the wrld,F2LLM-v2-80M,1.0,p19,0.4971,1.0,1.0,1.0,0.49714457988739014,0.03013196587562561
 q30,edge_typo,the tallest montain in the wrld,Gecko-110m-en (f32),1.0,p19,0.5334,1.0,1.0,1.0,0.5334484577178955,0.042851030826568604
 q30,edge_typo,the tallest montain in the wrld,Gecko-110m-en (int8),1.0,p19,0.5305,1.0,1.0,1.0,0.5304661989212036,0.03797975182533264
 q30,edge_typo,the tallest montain in the wrld,all-MiniLM-L6-v2,1.0,p19,0.4261,1.0,1.0,1.0,0.4260678291320801,0.004353225231170654
+q30,edge_typo,the tallest montain in the wrld,granite-embedding-97m-multilingual-r2,1.0,p19,0.8843,1.0,1.0,1.0,0.8843096494674683,0.038832008838653564
 q30,edge_typo,the tallest montain in the wrld,multilingual-e5-small,2.0,p47,0.8071,1.0,0.6309297535714575,0.5,0.8070845007896423,-0.008410394191741943
 q31,edge_typo,explain the pythagorean theorm,F2LLM-v2-80M,1.0,p46,0.6746,1.0,1.0,1.0,0.6746004819869995,0.410452663898468
 q31,edge_typo,explain the pythagorean theorm,Gecko-110m-en (f32),1.0,p46,0.8577,1.0,1.0,1.0,0.8577053546905518,0.41761451959609985
 q31,edge_typo,explain the pythagorean theorm,Gecko-110m-en (int8),1.0,p46,0.8532,1.0,1.0,1.0,0.8531811237335205,0.4256909489631653
 q31,edge_typo,explain the pythagorean theorm,all-MiniLM-L6-v2,1.0,p46,0.7165,1.0,1.0,1.0,0.7165349721908569,0.4236665368080139
+q31,edge_typo,explain the pythagorean theorm,granite-embedding-97m-multilingual-r2,1.0,p46,0.921,1.0,1.0,1.0,0.9210312366485596,0.08383291959762573
 q31,edge_typo,explain the pythagorean theorm,multilingual-e5-small,1.0,p46,0.8942,1.0,1.0,1.0,0.894191563129425,0.07831799983978271
 q32,edge_acronym,What is NASA?,F2LLM-v2-80M,1.0,p12,0.7434,1.0,1.0,1.0,0.7433507442474365,0.42809441685676575
 q32,edge_acronym,What is NASA?,Gecko-110m-en (f32),1.0,p12,0.7713,1.0,1.0,1.0,0.771335244178772,0.3523999750614166
 q32,edge_acronym,What is NASA?,Gecko-110m-en (int8),1.0,p12,0.7847,1.0,1.0,1.0,0.7846946120262146,0.36777254939079285
 q32,edge_acronym,What is NASA?,all-MiniLM-L6-v2,1.0,p12,0.775,1.0,1.0,1.0,0.775032639503479,0.41336363554000854
+q32,edge_acronym,What is NASA?,granite-embedding-97m-multilingual-r2,1.0,p12,0.966,1.0,1.0,1.0,0.9660313129425049,0.14521366357803345
 q32,edge_acronym,What is NASA?,multilingual-e5-small,1.0,p12,0.8964,1.0,1.0,1.0,0.8963693380355835,0.08634805679321289
 q33,edge_acronym,The American government space agency,F2LLM-v2-80M,1.0,p12,0.7357,1.0,1.0,1.0,0.735707700252533,0.5704967528581619
 q33,edge_acronym,The American government space agency,Gecko-110m-en (f32),1.0,p12,0.6864,1.0,1.0,1.0,0.6864123344421387,0.2306140959262848
 q33,edge_acronym,The American government space agency,Gecko-110m-en (int8),1.0,p12,0.6849,1.0,1.0,1.0,0.6849043369293213,0.23280280828475952
 q33,edge_acronym,The American government space agency,all-MiniLM-L6-v2,1.0,p12,0.749,1.0,1.0,1.0,0.7489949464797974,0.5457350313663483
+q33,edge_acronym,The American government space agency,granite-embedding-97m-multilingual-r2,1.0,p12,0.9199,1.0,1.0,1.0,0.9198593497276306,0.13525843620300293
 q33,edge_acronym,The American government space agency,multilingual-e5-small,1.0,p12,0.8958,1.0,1.0,1.0,0.8957782983779907,0.09836363792419434
 q34,edge_acronym,What does DNA do in living things?,F2LLM-v2-80M,1.0,p04,0.6629,1.0,1.0,1.0,0.6629379987716675,0.34505727887153625
 q34,edge_acronym,What does DNA do in living things?,Gecko-110m-en (f32),1.0,p04,0.7192,1.0,1.0,1.0,0.7192175388336182,0.27946168184280396
 q34,edge_acronym,What does DNA do in living things?,Gecko-110m-en (int8),1.0,p04,0.7122,1.0,1.0,1.0,0.712162971496582,0.2820727229118347
 q34,edge_acronym,What does DNA do in living things?,all-MiniLM-L6-v2,1.0,p04,0.6731,1.0,1.0,1.0,0.6731429100036621,0.38413259387016296
+q34,edge_acronym,What does DNA do in living things?,granite-embedding-97m-multilingual-r2,1.0,p04,0.9125,1.0,1.0,1.0,0.9125288128852844,0.11253541707992554
 q34,edge_acronym,What does DNA do in living things?,multilingual-e5-small,1.0,p04,0.8843,1.0,1.0,1.0,0.8842916488647461,0.06232786178588867
 q35,edge_ambiguous,Tell me about oceans and coral reefs,F2LLM-v2-80M,1.0,p42,0.4401,1.0,1.0,1.0,0.44010451436042786,0.22078697383403778
 q35,edge_ambiguous,Tell me about oceans and coral reefs,Gecko-110m-en (f32),1.0,p42,0.7467,1.0,0.9540734464808887,1.0,0.7467395067214966,0.28660207986831665
 q35,edge_ambiguous,Tell me about oceans and coral reefs,Gecko-110m-en (int8),1.0,p42,0.7505,1.0,0.9540734464808887,1.0,0.7505144476890564,0.28800690174102783
 q35,edge_ambiguous,Tell me about oceans and coral reefs,all-MiniLM-L6-v2,1.0,p42,0.572,1.0,1.0,1.0,0.5720244646072388,0.30147480964660645
+q35,edge_ambiguous,Tell me about oceans and coral reefs,granite-embedding-97m-multilingual-r2,1.0,p42,0.8871,1.0,0.9540734464808887,1.0,0.8871453404426575,0.07575643062591553
 q35,edge_ambiguous,Tell me about oceans and coral reefs,multilingual-e5-small,1.0,p42,0.8704,1.0,0.9638614719361266,1.0,0.8704176545143127,0.01678401231765747
 q36,edge_ambiguous,Popular hot caffeinated beverages,F2LLM-v2-80M,1.0,p33,0.6173,1.0,0.9651954696014428,1.0,0.6173182725906372,0.4288972020149231
 q36,edge_ambiguous,Popular hot caffeinated beverages,Gecko-110m-en (f32),1.0,p49,0.6636,1.0,0.8670870086853021,1.0,0.6635636687278748,0.21567702293395996
 q36,edge_ambiguous,Popular hot caffeinated beverages,Gecko-110m-en (int8),1.0,p49,0.6612,1.0,0.8670870086853021,1.0,0.6611670851707458,0.21493440866470337
 q36,edge_ambiguous,Popular hot caffeinated beverages,all-MiniLM-L6-v2,1.0,p34,0.5844,1.0,1.0,1.0,0.584374725818634,0.42820632457733154
+q36,edge_ambiguous,Popular hot caffeinated beverages,granite-embedding-97m-multilingual-r2,1.0,p33,0.8811,1.0,1.0,1.0,0.8811202049255371,0.1056322455406189
 q36,edge_ambiguous,Popular hot caffeinated beverages,multilingual-e5-small,1.0,p33,0.8678,1.0,1.0,1.0,0.8678005337715149,0.10172945261001587
 q37,edge_ambiguous,Facts about famous mountains,F2LLM-v2-80M,1.0,p47,0.3545,1.0,1.0,1.0,0.35452765226364136,0.04084372520446777
 q37,edge_ambiguous,Facts about famous mountains,Gecko-110m-en (f32),1.0,p19,0.557,1.0,1.0,1.0,0.5570079684257507,0.18620234727859497
 q37,edge_ambiguous,Facts about famous mountains,Gecko-110m-en (int8),1.0,p19,0.5511,1.0,1.0,1.0,0.5511442422866821,0.1850796937942505
 q37,edge_ambiguous,Facts about famous mountains,all-MiniLM-L6-v2,1.0,p47,0.4263,1.0,1.0,1.0,0.426321804523468,0.1324818730354309
+q37,edge_ambiguous,Facts about famous mountains,granite-embedding-97m-multilingual-r2,1.0,p19,0.8547,1.0,1.0,1.0,0.8547435402870178,0.0627170205116272
 q37,edge_ambiguous,Facts about famous mountains,multilingual-e5-small,1.0,p47,0.8467,1.0,1.0,1.0,0.8466788530349731,0.03663688898086548
 q38,edge_ambiguous,Widely used programming languages,F2LLM-v2-80M,1.0,p23,0.4653,1.0,1.0,1.0,0.4652652144432068,0.14431270956993103
 q38,edge_ambiguous,Widely used programming languages,Gecko-110m-en (f32),1.0,p23,0.492,1.0,1.0,1.0,0.4920251965522766,0.02791687846183777
 q38,edge_ambiguous,Widely used programming languages,Gecko-110m-en (int8),1.0,p23,0.4791,1.0,1.0,1.0,0.47908705472946167,0.02022075653076172
 q38,edge_ambiguous,Widely used programming languages,all-MiniLM-L6-v2,1.0,p23,0.5033,1.0,1.0,1.0,0.5032580494880676,0.2005205750465393
+q38,edge_ambiguous,Widely used programming languages,granite-embedding-97m-multilingual-r2,1.0,p23,0.8636,1.0,1.0,1.0,0.8635613918304443,0.03639531135559082
 q38,edge_ambiguous,Widely used programming languages,multilingual-e5-small,1.0,p25,0.8695,1.0,1.0,1.0,0.8695471286773682,0.06816232204437256
 q39,semantic,Which insects help flowers reproduce?,F2LLM-v2-80M,1.0,p40,0.5078,1.0,1.0,1.0,0.5078411102294922,0.2662190794944763
 q39,semantic,Which insects help flowers reproduce?,Gecko-110m-en (f32),1.0,p40,0.643,1.0,1.0,1.0,0.6429506540298462,0.23178008198738098
 q39,semantic,Which insects help flowers reproduce?,Gecko-110m-en (int8),1.0,p40,0.6359,1.0,1.0,1.0,0.6359001994132996,0.2367243766784668
 q39,semantic,Which insects help flowers reproduce?,all-MiniLM-L6-v2,1.0,p40,0.5083,1.0,1.0,1.0,0.5082898139953613,0.25680363178253174
+q39,semantic,Which insects help flowers reproduce?,granite-embedding-97m-multilingual-r2,1.0,p40,0.8877,1.0,1.0,1.0,0.8877321481704712,0.13631469011306763
 q39,semantic,Which insects help flowers reproduce?,multilingual-e5-small,1.0,p40,0.8689,1.0,1.0,1.0,0.8689289093017578,0.08747494220733643
 q40,exact_paraphrase,Why was the Great Wall of China built?,F2LLM-v2-80M,1.0,p15,0.7983,1.0,1.0,1.0,0.7982625961303711,0.5571831464767456
 q40,exact_paraphrase,Why was the Great Wall of China built?,Gecko-110m-en (f32),1.0,p15,0.8354,1.0,1.0,1.0,0.8354097604751587,0.42828142642974854
 q40,exact_paraphrase,Why was the Great Wall of China built?,Gecko-110m-en (int8),1.0,p15,0.8401,1.0,1.0,1.0,0.8400893807411194,0.44015875458717346
 q40,exact_paraphrase,Why was the Great Wall of China built?,all-MiniLM-L6-v2,1.0,p15,0.7437,1.0,1.0,1.0,0.743666410446167,0.5536305010318756
+q40,exact_paraphrase,Why was the Great Wall of China built?,granite-embedding-97m-multilingual-r2,1.0,p15,0.97,1.0,1.0,1.0,0.9699686765670776,0.183391273021698
 q40,exact_paraphrase,Why was the Great Wall of China built?,multilingual-e5-small,1.0,p15,0.9084,1.0,1.0,1.0,0.9084148406982422,0.114510178565979
