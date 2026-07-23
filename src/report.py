@@ -22,9 +22,15 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 import config  # noqa: E402
 
-PALETTE = {"minilm": "#2563eb", "e5": "#d97706", "f2llm": "#059669"}  # blue / amber / green
+PALETTE = {
+    "minilm": "#2563eb",       # blue
+    "e5": "#d97706",           # amber
+    "f2llm": "#059669",        # green
+    "gecko_f32": "#7c3aed",    # violet
+    "gecko_quant": "#db2777",  # pink
+}
 # fallback colors for any model keys not in PALETTE
-_FALLBACK_COLORS = ["#7c3aed", "#dc2626", "#0891b2", "#ca8a04"]
+_FALLBACK_COLORS = ["#dc2626", "#0891b2", "#ca8a04", "#4b5563"]
 
 
 def color_for(key: str, idx: int) -> str:
@@ -418,12 +424,19 @@ English-only, mixed general knowledge &middot; generated {esc(results['generated
 
 <h2>2. Setup</h2>
 <p class="sub">Each model uses its own prefix convention and L2-normalized cosine similarity.
-Same corpus, queries, qrels, and k grid for both. Run on CPU.</p>
+Same corpus, queries, qrels, and k grid for every model. Run on CPU.</p>
 {latency_table(models)}
 <div class="callout"><b>Fairness note.</b> <code>multilingual-e5-small</code> requires
 <code>query:</code> / <code>passage:</code> prefixes; <code>all-MiniLM-L6-v2</code> uses none.
 Both are applied automatically. The corpus is <b>English-only</b>, so e5's multilingual strength
-is <i>not</i> exercised here &mdash; this is a pure English semantic-retrieval comparison.</div>
+is <i>not</i> exercised here &mdash; this is a pure English semantic-retrieval comparison.
+<br><br>The two <code>Gecko-110m-en</code> models are <b>on-device LiteRT/TFLite</b> embedders
+(<code>f32</code> and dynamic-<code>int8</code> variants of the same model) run through a TFLite
+interpreter with a SentencePiece tokenizer, whereas the other three run under batched PyTorch.
+<b>Latency is therefore not a fair head-to-head:</b> the Gecko numbers are single-item (batch&nbsp;1),
+pay a fixed 512-token padding cost per text, and include SentencePiece tokenization &mdash; read them
+as on-device edge latency, not throughput against the server models. Retrieval-<i>quality</i> metrics
+remain directly comparable.</div>
 
 <h2>3. Aggregate metrics</h2>
 <p class="sub">Averaged over answerable queries; best value per row highlighted. k grid: {config.K_VALUES}.</p>

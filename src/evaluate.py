@@ -21,7 +21,7 @@ sys.path.insert(0, ROOT)   # config
 sys.path.insert(0, HERE)   # sibling modules
 
 import config  # noqa: E402
-from embedder import Embedder  # noqa: E402
+from embedder import make_embedder  # noqa: E402
 from retriever import Retriever  # noqa: E402
 import metrics as M  # noqa: E402
 from calibrate import calibrate_model  # noqa: E402
@@ -41,7 +41,7 @@ def run_model(cfg: dict, dataset: dict) -> dict:
     passage_text = {p["id"]: p["text"] for p in passages}
 
     print(f"  [{cfg['name']}] loading model ...")
-    emb = Embedder(cfg).load()
+    emb = make_embedder(cfg).load()
 
     print(f"  [{cfg['name']}] encoding {len(passages)} passages + {len(queries)} queries ...")
     p_emb = emb.encode_passages([p["text"] for p in passages])

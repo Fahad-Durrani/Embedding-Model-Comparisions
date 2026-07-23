@@ -12,3 +12,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Downloaded model files (large TFLite/LiteRT artifacts, pulled on first run)
+models/
